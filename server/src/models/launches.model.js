@@ -37,8 +37,8 @@ function addNewLaunch(launch) {
 }
 
 function abortLaunchById(launch) {
-    const aborted = launches.delete(launchId);
-    aborted.upcoming = false;
+  const aborted = launches.delete(launchId);
+  aborted.upcoming = false;
 }
 module.exports = {
   getAllLaunches,
