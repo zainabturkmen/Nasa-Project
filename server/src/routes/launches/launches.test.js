@@ -30,7 +30,8 @@ describe("Test POST /launche", () => {
       .send(completeLaunchData)
       .expect("Content-type", /json/)
       .expect(201);
-    const requestDate = completeLaunchData.launchDate;
+      const requestDate = completeLaunchData.launchDate;
+      const responseDate = response.body.launchDate;
     expect(response.body).toMatchObject(launchDateWithoutDate);
   });
 
