@@ -1,5 +1,5 @@
 const http = require("http");
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 
 const app = require("./app");
 
@@ -13,7 +13,6 @@ const MONGO_URL =
 const server = http.createServer(app);
 
 async function startServer() {
-  
   await loadPlanetsData();
 
   server.listen(PORT, () => {
