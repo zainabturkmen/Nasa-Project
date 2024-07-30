@@ -22,6 +22,12 @@ function existsLaunchesWidthId(launchId) {
   return launches.has(launchId);
 }
 
+async function getLatestFlightNumber() {
+  const latestLaunch = await launchesDatabase.findOne().sort("-flightNumber");
+
+  return latestLaunch;
+}
+
 async function getAllLaunches() {
   return await launchesDatabase.find({}, { _id: 0, __v: 0 });
 }
